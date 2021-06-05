@@ -1,5 +1,7 @@
+import 'package:clubhouse_ui/data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:clubhouse_ui/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -24,6 +26,10 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(CupertinoIcons.bell, size: 28.0),
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8.0, 10.0, 20.0, 10.0),
+            child: UserProfileImg(imageUrl: currentUser.imageUrl, size: 36.0),
+          )
         ],
       ),
     );
