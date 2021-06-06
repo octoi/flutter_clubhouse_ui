@@ -1,5 +1,6 @@
 import 'package:clubhouse_ui/data.dart';
 import 'package:clubhouse_ui/widgets/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RoomCard extends StatelessWidget {
@@ -78,6 +79,37 @@ class RoomCard extends StatelessWidget {
                                 .copyWith(fontSize: 16.0),
                           );
                         }),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text.rich(
+                            TextSpan(
+                              children: [
+                                TextSpan(
+                                  text:
+                                      '${room.speakers.length + room.followedBySpeakers.length + room.others.length}',
+                                ),
+                                const WidgetSpan(
+                                  child: Icon(
+                                    CupertinoIcons.person_fill,
+                                    size: 18.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                TextSpan(text: ' / ${room.speakers.length} '),
+                                const WidgetSpan(
+                                  child: Icon(
+                                    CupertinoIcons.chat_bubble_fill,
+                                    size: 18.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
