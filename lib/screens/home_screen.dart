@@ -32,6 +32,11 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
+      body: ListView(
+        children: [
+          UpcomingRooms(upcomingRooms: upcomingRoomsList),
+        ],
+      ),
     );
   }
 }
