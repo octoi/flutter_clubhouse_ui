@@ -1,4 +1,5 @@
 import 'package:clubhouse_ui/data.dart';
+import 'package:clubhouse_ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class RoomCard extends StatelessWidget {
@@ -38,6 +39,32 @@ class RoomCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
               ),
+              const SizedBox(height: 12.0),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 100.0,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 28.0,
+                            top: 20.0,
+                            child: UserProfileImg(
+                              imageUrl: room.speakers[1].imageUrl,
+                              size: 48.0,
+                            ),
+                          ),
+                          UserProfileImg(
+                            imageUrl: room.speakers[0].imageUrl,
+                            size: 48.0,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
