@@ -1,4 +1,5 @@
 import 'package:clubhouse_ui/data.dart';
+import 'package:clubhouse_ui/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,12 @@ class RoomScreen extends StatelessWidget {
           icon: const Icon(CupertinoIcons.chevron_down),
           label: const Text('All Rooms'),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(CupertinoIcons.doc, size: 28.0),
+            onPressed: () {},
+          ),
+        ],
       ),
     );
   }
