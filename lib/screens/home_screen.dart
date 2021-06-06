@@ -32,12 +32,35 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 120.0),
+      body: Stack(
         children: [
-          UpcomingRooms(upcomingRooms: upcomingRoomsList),
-          const SizedBox(height: 12.0),
-          ...roomsList.map((room) => RoomCard(room: room)),
+          ListView(
+            physics: BouncingScrollPhysics(),
+            padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 120.0),
+            children: [
+              UpcomingRooms(upcomingRooms: upcomingRoomsList),
+              const SizedBox(height: 12.0),
+              ...roomsList.map((room) => RoomCard(room: room)),
+            ],
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Theme.of(context).scaffoldBackgroundColor.withOpacity(0.1),
+                    Theme.of(context).scaffoldBackgroundColor,
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
