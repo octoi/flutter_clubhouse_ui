@@ -41,6 +41,7 @@ class RoomCard extends StatelessWidget {
               ),
               const SizedBox(height: 12.0),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Container(
@@ -61,6 +62,23 @@ class RoomCard extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ...room.speakers.map((speaker) {
+                          return Text(
+                            '${speaker.givenName} ${speaker.familyName} 💬',
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText1!
+                                .copyWith(fontSize: 16.0),
+                          );
+                        }),
+                      ],
                     ),
                   ),
                 ],
