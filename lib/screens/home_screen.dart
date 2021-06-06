@@ -33,6 +33,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Stack(
+        alignment: Alignment.center,
         children: [
           ListView(
             physics: BouncingScrollPhysics(),
@@ -60,7 +61,38 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
+          Positioned(
+            bottom: 60.0,
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: Theme.of(context).accentColor,
+                borderRadius: BorderRadius.circular(24.0),
+              ),
+              child: const Text.rich(
+                TextSpan(
+                  children: [
+                    WidgetSpan(
+                      child: Icon(
+                        CupertinoIcons.add,
+                        size: 21.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                    TextSpan(
+                      text: ' Start a room',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
