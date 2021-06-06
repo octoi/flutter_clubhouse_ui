@@ -25,6 +25,10 @@ class RoomScreen extends StatelessWidget {
             icon: Icon(CupertinoIcons.doc, size: 28.0),
             onPressed: () {},
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8.0, 10.0, 20.0, 10.0),
+            child: UserProfileImg(imageUrl: currentUser.imageUrl, size: 36.0),
+          )
         ],
       ),
     );
