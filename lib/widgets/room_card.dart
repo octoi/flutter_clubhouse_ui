@@ -11,6 +11,22 @@ class RoomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card();
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            Text(
+              '${room.club} 🏡'.toUpperCase(),
+              style: Theme.of(context)
+                  .textTheme
+                  .overline!
+                  .copyWith(fontWeight: FontWeight.w600, letterSpacing: 1.0),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
