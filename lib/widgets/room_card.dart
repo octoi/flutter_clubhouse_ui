@@ -31,6 +31,13 @@ class RoomCard extends StatelessWidget {
                     ),
                 overflow: TextOverflow.ellipsis,
               ),
+              Text(
+                room.name,
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
             ],
           ),
         ),
