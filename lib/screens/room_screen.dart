@@ -160,28 +160,33 @@ class RoomScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
         height: 110.0,
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 6.0,
-                horizontal: 16.0,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(24.0),
-              ),
-              child: const Text.rich(TextSpan(children: [
-                TextSpan(text: '✌🏾', style: TextStyle(fontSize: 20.0)),
-                TextSpan(
-                  text: 'Leave quietly',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 1.0,
-                  ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).pop(),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 6.0,
+                  horizontal: 16.0,
                 ),
-              ])),
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+                child: const Text.rich(TextSpan(children: [
+                  TextSpan(text: '✌🏾', style: TextStyle(fontSize: 20.0)),
+                  TextSpan(
+                    text: 'Leave quietly',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                ])),
+              ),
             )
           ],
         ),
