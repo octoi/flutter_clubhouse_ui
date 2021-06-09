@@ -1,3 +1,4 @@
+import 'package:clubhouse_ui/widgets/user_profile_img.dart';
 import 'package:flutter/material.dart';
 
 class RoomUserProfile extends StatelessWidget {
@@ -18,6 +19,42 @@ class RoomUserProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        Stack(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(6.0),
+              child: UserProfileImg(
+                imageUrl: imageUrl,
+                size: size,
+              ),
+            ),
+            if (isNew)
+              Positioned(
+                left: 0,
+                bottom: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(4.0),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        offset: Offset(0, 2),
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                  ),
+                  alignment: Alignment.center,
+                  child: Text('🎉', style: TextStyle(fontSize: 20.0)),
+                ),
+              )
+          ],
+        ),
+        Text(name)
+      ],
+    );
   }
 }
