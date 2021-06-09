@@ -42,6 +42,7 @@ class RoomScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(40.0),
         ),
         child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
               child: Column(
