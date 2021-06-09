@@ -187,6 +187,33 @@ class RoomScreen extends StatelessWidget {
                   ),
                 ])),
               ),
+            ),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.all(6.0),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(CupertinoIcons.add, size: 30.0),
+                  ),
+                ),
+                const SizedBox(width: 16.0),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.all(6.0),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(CupertinoIcons.hand_raised, size: 30.0),
+                  ),
+                ),
+              ],
             )
           ],
         ),
