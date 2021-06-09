@@ -39,6 +39,25 @@ class RoomScreen extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(40.0),
         ),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Club'),
+                      const Icon(CupertinoIcons.ellipsis),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
