@@ -61,6 +61,14 @@ class RoomScreen extends StatelessWidget {
                       const Icon(CupertinoIcons.ellipsis),
                     ],
                   ),
+                  Text(
+                    room.name,
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.0,
+                        ),
+                  )
                 ],
               ),
             )
