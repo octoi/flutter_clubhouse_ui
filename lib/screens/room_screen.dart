@@ -31,6 +31,15 @@ class RoomScreen extends StatelessWidget {
           )
         ],
       ),
+      body: Container(
+        padding: EdgeInsets.all(20.0),
+        height: MediaQuery.of(context).size.height,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(40.0),
+        ),
+      ),
     );
   }
 }
