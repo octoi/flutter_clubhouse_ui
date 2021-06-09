@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:clubhouse_ui/data.dart';
 import 'package:clubhouse_ui/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
@@ -79,9 +81,12 @@ class RoomScreen extends StatelessWidget {
                 crossAxisCount: 3,
                 children: room.speakers
                     .map(
-                      (e) => RoomUserProfile(
-                        name: e.givenName,
-                        imageUrl: e.imageUrl,
+                      (user) => RoomUserProfile(
+                        imageUrl: user.imageUrl,
+                        size: 66.0,
+                        name: user.givenName,
+                        isNew: Random().nextBool(),
+                        isMuted: Random().nextBool(),
                       ),
                     )
                     .toList(),
