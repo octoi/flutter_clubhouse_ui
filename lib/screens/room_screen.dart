@@ -104,6 +104,24 @@ class RoomScreen extends StatelessWidget {
                 ),
               ),
             ),
+            SliverPadding(
+              padding: const EdgeInsets.all(20.0),
+              sliver: SliverGrid.count(
+                mainAxisSpacing: 20.0,
+                crossAxisCount: 4,
+                childAspectRatio: 0.7,
+                children: room.followedBySpeakers
+                    .map(
+                      (user) => RoomUserProfile(
+                        imageUrl: user.imageUrl,
+                        size: 66.0,
+                        name: user.givenName,
+                        isNew: Random().nextBool(),
+                      ),
+                    )
+                    .toList(),
+              ),
+            ),
           ],
         ),
       ),
