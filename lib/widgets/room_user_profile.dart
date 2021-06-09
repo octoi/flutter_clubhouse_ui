@@ -78,7 +78,8 @@ class RoomUserProfile extends StatelessWidget {
               ),
           ],
         ),
-        Text(name)
+        const SizedBox(height: 4.0),
+        Flexible(child: Text(name, overflow: TextOverflow.ellipsis))
       ],
     );
   }
