@@ -49,7 +49,15 @@ class RoomScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Club'),
+                      Text(
+                        '${room.club} 🏡'.toUpperCase(),
+                        style: Theme.of(context).textTheme.overline!.copyWith(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 1.0,
+                            ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
                       const Icon(CupertinoIcons.ellipsis),
                     ],
                   ),
